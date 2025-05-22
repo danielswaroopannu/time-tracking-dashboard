@@ -148,6 +148,11 @@ button:active {
   width: 100%;
 }
 
+.card .content:hover {
+  background-color: hsl(235, 45%, 61%);
+  cursor: pointer;
+}
+
 .card .content .title {
   display: flex;
   justify-content: space-between;
