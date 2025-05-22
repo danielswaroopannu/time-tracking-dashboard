@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  background-color: hsl(226, 43%, 10%);
+  font-size: 18px;
+}
+
+.container {
+  width: 50%;
+  display: grid;
+  grid-template-columns: 25% 74%;
+  gap: 15px;
+  padding: 20px;
+}
+
+/* Left Block - Profile Section */
+.left-block {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(235, 46%, 20%);
+  color: white;
+  border-radius: 10px;
+}
+
+.left-block .profile {
+  width: 100%;
+  background-color: hsl(246, 80%, 60%);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.left-block .profile img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 2px solid white;
+  margin-bottom: 30px;
+}
+
+.left-block .profile p {
+  font-size: 12px;
+  opacity: 0.5;
+  margin-bottom: 10px;
+}
+
+.left-block .profile h1 {
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+.timeframe-links {
+  display: flex;
+  flex-direction: column; /* Align buttons vertically */
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 15px;
+}
+
+button {
+  padding: 6px 12px;
+  cursor: pointer;
+  color: hsl(235, 45%, 61%);
+  border: none;
+  background-color: transparent;
+  letter-spacing: 0.5px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+button:hover,
+button:focus,
+button:active {
+  color: hsl(236, 100%, 87%);
+}
+
+/* Right Block */
+.right-block {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  width: 100%;
+}
+
+.card {
+  color: white;
+  border-radius: 13px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card .card-image {
+  margin-left: auto;
+}
+
+.card .card-image img {
+  width: 50px;
+  height: 50px;
+  padding: 5px 5px 0 0;
+}
+
+.card:first-child {
+  background-color: hsl(15, 100%, 70%);
+}
+.card:nth-child(2) {
+  background-color: hsl(195, 74%, 62%);
+}
+.card:nth-child(3) {
+  background-color: hsl(348, 100%, 68%);
+}
+.card:nth-child(4) {
+  background-color: hsl(145, 58%, 55%);
+}
+.card:nth-child(5) {
+  background-color: hsl(264, 64%, 52%);
+}
+.card:last-child {
+  background-color: hsl(43, 84%, 65%);
+}
+
+.card .content {
+  background-color: hsl(235, 46%, 20%);
+  padding: 15px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.card .content .title {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.card .content .title p {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.card .content .current-hours {
+  font-weight: 300;
+  font-size: 40px;
+  margin: 15px 0;
+}
+
+.card .content .previous-hours {
+  font-size: 14px;
+  color: hsl(236, 100%, 87%);
+}
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .left-block,
+  .right-block {
+    width: 100%;
+  }
+
+  .timeframe-links {
+    flex-direction: row;
+  }
+
+  .profile {
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .profile img {
+    margin-bottom: 0 !important;
+  }
+
+  .heading h1 {
+    font-size: 24px;
+    margin-bottom: 0 !important;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
